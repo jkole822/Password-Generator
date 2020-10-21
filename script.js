@@ -62,7 +62,7 @@ function writePassword() {
 				const randUpLettIndex = getRandomInt(alphabet.length);
 				password += alphabet[randUpLettIndex].toUpperCase();
 			} else if (
-				charTypes[randCategory].category == "number" &&
+				charTypes[randCategory].category == "numeric" &&
 				charTypes[randCategory].active
 			) {
 				const randNum = getRandomInt(10);
