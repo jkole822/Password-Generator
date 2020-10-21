@@ -12,11 +12,23 @@ function writePassword() {
 
 		// Ask the user for input and assign selections to respective variables.
 		// numChar will determine the endpoint for the while loop below
-		const numChar = parseInt(
-			prompt(
-				"Input an integer value between 8-128 for the number of characters included in your password."
-			)
-		);
+
+		let numChar;
+
+		let active = true;
+		while (active) {
+			numChar = parseInt(
+				prompt(
+					"Input an integer value between 8-128 for the number of characters included in your password."
+				)
+			);
+
+			if (numChar >= 8 && numChar <= 128) {
+				active = false;
+			} else {
+				alert("Selection must be between 8-128.");
+			}
+		}
 
 		let selectLow;
 		let selectUp;
@@ -24,7 +36,7 @@ function writePassword() {
 		let selectSpec;
 
 		// Implement while loop to continually ask user for character selections until at least one type is selected.
-		let active = true;
+		active = true;
 		while (active) {
 			selectLow = confirm("Include lowercase characters?");
 			selectUp = confirm("Include uppercase characters?");
