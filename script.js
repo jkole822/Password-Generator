@@ -17,10 +17,26 @@ function writePassword() {
 				"Input an integer value between 8-128 for the number of characters included in your password."
 			)
 		);
-		const selectLow = confirm("Include lowercase characters?");
-		const selectUp = confirm("Include uppercase characters?");
-		const selectNum = confirm("Include numeric characters?");
-		const selectSpec = confirm("Include special characters?");
+
+		let selectLow;
+		let selectUp;
+		let selectNum;
+		let selectSpec;
+
+		// Implement while loop to continually ask user for character selections until at least one type is selected.
+		let active = true;
+		while (active) {
+			selectLow = confirm("Include lowercase characters?");
+			selectUp = confirm("Include uppercase characters?");
+			selectNum = confirm("Include numeric characters?");
+			selectSpec = confirm("Include special characters?");
+
+			if (selectLow || selectUp || selectNum || selectSpec) {
+				active = false;
+			} else {
+				alert("Please select at least one character type.");
+			}
+		}
 
 		// Create charTypes object that assigns a value to objects containing keys that specify the type of
 		// character and whether the user selected that character to be used to generate a password
