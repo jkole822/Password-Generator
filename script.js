@@ -19,14 +19,14 @@ function writePassword() {
 		while (active) {
 			numChar = parseInt(
 				prompt(
-					"Input an integer value between 8-128 for the number of characters included in your password."
+					"Input an integer value of at least 8 and no more than 128 for the number of characters included in your password."
 				)
 			);
 
 			if (numChar >= 8 && numChar <= 128) {
 				active = false;
 			} else {
-				alert("Selection must be between 8-128.");
+				alert("Selection must be no less than 8 and no more than 128.");
 			}
 		}
 
