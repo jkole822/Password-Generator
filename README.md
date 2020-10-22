@@ -11,6 +11,8 @@ The application will prompt the user to select the following when generating a n
 - Inclusion of numerical characters (0-9)
 - Inclusion of special characters (! \"#\$%&'()\*+,-./:;<=>?@[\\]^\_`{|}~)
 
+The password generator validates the users input to ensure the specified password length is appropriate and at least one type of character is selected to generated the password.
+
 [View the deployed project.](https://jkole822.github.io/Password-Generator/)
 
 ## Visuals
