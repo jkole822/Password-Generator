@@ -13,9 +13,7 @@ function writePassword() {
 		// Ask the user for input and assign selections to respective variables.
 		// numChar will determine the endpoint for the while loop below
 
-		let numChar;
-
-		let active = true;
+		var active = true;
 		while (active) {
 			numChar = parseInt(
 				prompt(
@@ -30,18 +28,13 @@ function writePassword() {
 			}
 		}
 
-		let selectLow;
-		let selectUp;
-		let selectNum;
-		let selectSpec;
-
 		// Implement while loop to continually ask user for character selections until at least one type is selected.
 		active = true;
 		while (active) {
-			selectLow = confirm("Include lowercase characters?");
-			selectUp = confirm("Include uppercase characters?");
-			selectNum = confirm("Include numeric characters?");
-			selectSpec = confirm("Include special characters?");
+			var selectLow = confirm("Include lowercase characters?");
+			var selectUp = confirm("Include uppercase characters?");
+			var selectNum = confirm("Include numeric characters?");
+			var selectSpec = confirm("Include special characters?");
 
 			if (selectLow || selectUp || selectNum || selectSpec) {
 				active = false;
@@ -74,7 +67,7 @@ function writePassword() {
 		// Build password using while loop which begins by randomly selecting a character type based on the object above.
 		// Cycles through conditionals which conditionally concatenate a random character to the password that corresponds
 		// to the randomly selected category.
-		let password = "";
+		var password = "";
 		while (password.length < numChar) {
 			const randCategory = getRandomInt(4);
 			if (
