@@ -17,5 +17,5 @@ The password generator validates the users input to ensure the specified passwor
 
 ## Visuals
 
-![Password Generator App](/public/images/password-generator.png)
-![Generated Password](/public/images/password-generated.png)
+![Password Generator App](/images/password-generator.png)
+![Generated Password](/images/password-generated.png)
