@@ -11,8 +11,7 @@ function writePassword() {
 		const specialChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
 
 		// Ask the user for input and assign selections to respective variables.
-		// numChar will determine the endpoint for the while loop below
-
+		// numChar will determine the endpoint for the while loop below.
 		var active = true;
 		while (active) {
 			numChar = parseInt(
@@ -21,7 +20,11 @@ function writePassword() {
 				)
 			);
 
-			if (numChar >= 8 && numChar <= 128) {
+			if (isNaN(parseInt(numChar))) {
+				// Validates whether the entry is a number.
+				alert("That is not a valid entry. Please select a number.");
+			} else if (numChar >= 8 && numChar <= 128) {
+				// Validates whether the number is within the specified range.
 				active = false;
 			} else {
 				alert("Selection must be no less than 8 and no more than 128.");
@@ -44,7 +47,7 @@ function writePassword() {
 		}
 
 		// Create charTypes object that assigns a value to objects containing keys that specify the type of
-		// character and whether the user selected that character to be used to generate a password
+		// character and whether the user selected that character to be used to generate a password.
 		const charTypes = {
 			0: {
 				category: "lowercase",
