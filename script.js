@@ -20,7 +20,7 @@ function writePassword() {
 				)
 			);
 
-			if (isNaN(parseInt(numChar))) {
+			if (isNaN(numChar)) {
 				// Validates whether the entry is a number.
 				alert("That is not a valid entry. Please select a number.");
 			} else if (numChar >= 8 && numChar <= 128) {
